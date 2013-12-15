@@ -1,0 +1,19 @@
+[user]
+	name = Mark Schifflin
+	email = rschifflin@hotmail.com
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+[diff]
+	tool = vimdiff
+[core]
+	excludesfile = /Users/mark/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
