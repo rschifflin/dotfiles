@@ -1,22 +1,46 @@
-"Pathogen plugins:
-"YouCompleteMe: https://github.com/Valloric/YouCompleteMe.git
-"Ctrl-p: https://github.com/kien/ctrlp.vim.git
-"Dash: https://github.com/rizzatti/dash.vim.git
-"funcoo: https://github.com/rizzatti/funcoo.vim.git
-"nerdtree: https://github.com/scrooloose/nerdtree.git
-"slim: https://github.com/slim-template/vim-slim.git
-"syntastic: https://github.com/scrooloose/syntastic.git
-"solarized: https://github.com/altercation/vim-colors-solarized.git
-"fugitive: https://github.com/tpope/vim-fugitive.git
-"textobj: https://github.com/kana/vim-textobj-user.git
-"textobj-ruby: https://github.com/nelstrom/vim-textobj-rubyblock.git
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
 
-execute pathogen#infect()
+"Pathogen plugins:
+"YouCompleteMe: 
+Bundle '/Valloric/YouCompleteMe.git'
+
+"Ctrl-p: 
+Bundle 'kien/ctrlp.vim.git'
+
+"Dash: 
+Bundle 'rizzatti/dash.vim.git'
+
+"funcoo: 
+Bundle 'rizzatti/funcoo.vim.git'
+
+"nerdtree: 
+Bundle 'scrooloose/nerdtree.git'
+
+"slim: 
+Bundle 'slim-template/vim-slim.git'
+
+"syntastic: 
+Bundle 'scrooloose/syntastic.git'
+
+"solarized: 
+Bundle 'altercation/vim-colors-solarized.git'
+
+"fugitive: 
+Bundle 'tpope/vim-fugitive.git'
+
+"textobj: 
+Bundle 'kana/vim-textobj-user.git'
+
+"textobj-ruby: 
+Bundle 'nelstrom/vim-textobj-rubyblock.git'
+
 syntax on
 
 "Allows manipulating ruby block
 runtime macros/matchit.vim
-set nocompatible
 if has("autocmd")
   filetype indent plugin on
 endif
