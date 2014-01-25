@@ -4,8 +4,10 @@ export PATH=/user/local/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 GIT_PS1_SHOWDIRTYSTATE=true
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+if command -v brew > /dev/null 2>&1; then
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
+  fi
 fi
 
 PS1='[\W$(__git_ps1 " (%s)")]'
