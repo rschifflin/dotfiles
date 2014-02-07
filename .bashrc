@@ -1,5 +1,6 @@
 export CLICOLOR=1
 alias vi=vim
+alias lsd="ls -d */"
 export PATH=/user/local/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
