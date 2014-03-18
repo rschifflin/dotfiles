@@ -3,7 +3,9 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-"Pathogen plugins:
+"ios.vim:
+Bundle '/eraserhd/vim-ios.git'
+
 "YouCompleteMe: 
 Bundle '/Valloric/YouCompleteMe.git'
 
@@ -36,6 +38,16 @@ Bundle 'kana/vim-textobj-user.git'
 
 "textobj-ruby: 
 Bundle 'nelstrom/vim-textobj-rubyblock.git'
+
+"rust
+Bundle 'wting/rust.vim'
+
+"scala
+Bundle 'derekwyatt/vim-scala'
+
+"coffescript
+Bundle 'kchmck/vim-coffee-script'
+
 
 syntax on
 
