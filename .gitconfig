@@ -6,9 +6,11 @@
 	ci = commit
 	br = branch
 	st = status
-        tip = "!git push -u origin `git symbolic-ref HEAD`" 
+        tip = "!git push -u origin `git symbolic-ref HEAD`"
 [diff]
 	tool = vimdiff
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
+[merge]
+        conflictstyle = diff3

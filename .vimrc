@@ -6,37 +6,37 @@ call vundle#rc()
 "ios.vim:
 Bundle '/eraserhd/vim-ios.git'
 
-"YouCompleteMe: 
+"YouCompleteMe:
 Bundle '/Valloric/YouCompleteMe.git'
 
-"Ctrl-p: 
+"Ctrl-p:
 Bundle 'kien/ctrlp.vim.git'
 
-"Dash: 
+"Dash:
 Bundle 'rizzatti/dash.vim.git'
 
-"funcoo: 
+"funcoo:
 Bundle 'rizzatti/funcoo.vim.git'
 
-"nerdtree: 
+"nerdtree:
 Bundle 'scrooloose/nerdtree.git'
 
-"slim: 
+"slim:
 Bundle 'slim-template/vim-slim.git'
 
-"syntastic: 
+"syntastic:
 Bundle 'scrooloose/syntastic.git'
 
-"solarized: 
+"solarized:
 Bundle 'altercation/vim-colors-solarized.git'
 
-"fugitive: 
+"fugitive:
 Bundle 'tpope/vim-fugitive.git'
 
-"textobj: 
+"textobj:
 Bundle 'kana/vim-textobj-user.git'
 
-"textobj-ruby: 
+"textobj-ruby:
 Bundle 'nelstrom/vim-textobj-rubyblock.git'
 
 "rust
@@ -48,6 +48,11 @@ Bundle 'derekwyatt/vim-scala'
 "coffescript
 Bundle 'kchmck/vim-coffee-script'
 
+"Surround
+Bundle 'tpope/vim-surround'
+
+"Dot Repeat
+Bundle 'tpope/vim-repeat'
 
 syntax on
 
@@ -85,7 +90,7 @@ nmap <F1> :NERDTreeToggle<CR>
 map <F5> :!ruby %<CR>
 
 "Navigate windows easier
-nnoremap <C-J> <C-W><C-J> 
+nnoremap <C-J> <C-W><C-J>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -114,7 +119,6 @@ autocmd WinEnter * highlight StatusLine ctermfg=15  guifg=#ffffff ctermbg=239 gu
 "Swap absolute and relative numbering
 nnoremap <C-n> :set relativenumber!<CR>
 
-
 set statusline =%{fugitive#statusline()} "Git branch
 set statusline +=\ %t                     "Filename
 set statusline +=%m                       "Modified flag
@@ -130,5 +134,7 @@ highlight MatchParen guifg=#FFFF00 ctermfg=yellow guibg=NONE ctermbg=NONE gui=BO
 highlight rspecOK guifg=#00FF00 ctermfg=green
 highlight Search guibg=#ADD8E6 ctermbg=lightblue
 
+"Stripping trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 let g:ycm_register_as_syntastic_checker=0
