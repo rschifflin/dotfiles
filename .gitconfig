@@ -7,6 +7,10 @@
 	br = branch
 	st = status
         tip = "!git push -u origin `git symbolic-ref HEAD`"
+        graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+        pre = "!git br `git rev-parse --abbrev-ref HEAD`-pre"
+        post = "!git br -d `git rev-parse --abbrev-ref HEAD`-pre"
+        POST = "!git br -D `git rev-parse --abbrev-ref HEAD`-pre"
 [diff]
 	tool = vimdiff
 [core]
