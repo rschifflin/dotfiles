@@ -6,10 +6,10 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 "ios.vim:
-Bundle '/eraserhd/vim-ios.git'
+Bundle 'eraserhd/vim-ios.git'
 
 "YouCompleteMe:
-Bundle '/Valloric/YouCompleteMe.git'
+Bundle 'Valloric/YouCompleteMe.git'
 
 "Ctrl-p:
 Bundle 'kien/ctrlp.vim.git'
