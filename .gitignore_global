@@ -43,3 +43,7 @@ Thumbs.db
 # RVM version files #
 #####################
 .ruby-version
+
+# Node modules #
+#####################
+node_modules

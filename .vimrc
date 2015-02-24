@@ -107,6 +107,7 @@ set softtabstop=2
 set expandtab
 set scrolloff=8
 set backspace=indent,eol,start
+set synmaxcol=256
 
 "Pressing enter clears search
 nnoremap <silent> <CR> :noh<CR>

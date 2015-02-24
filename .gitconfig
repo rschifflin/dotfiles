@@ -11,6 +11,7 @@
         pre = "!git br `git rev-parse --abbrev-ref HEAD`-pre"
         post = "!git br -d `git rev-parse --abbrev-ref HEAD`-pre"
         POST = "!git br -D `git rev-parse --abbrev-ref HEAD`-pre"
+        root = "!git rev-parse --show-toplevel"
 [diff]
 	tool = vimdiff
 [core]
@@ -18,3 +19,5 @@
 	editor = vim
 [merge]
         conflictstyle = diff3
+[push]
+        default = simple
