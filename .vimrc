@@ -206,8 +206,14 @@ autocmd BufWritePre * :%s/\s\+$//e
   vmap <expr> <S-Right> DVB_Drag('right')
   vmap <expr> D DVB_Duplicate()
 
+"Swap selected text with most-recently deleted text
+vnoremap <C-X> <Esc> `.``gvP``P
+
 let g:DVB_TrimWS = 1 "remove trailing whitespace after moving
 
 let g:ycm_register_as_syntastic_checker=0
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'node_modules'
+  \ }
