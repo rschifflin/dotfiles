@@ -2,74 +2,86 @@ let $BASH_ENV = "~/.bashrc"
 
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"Vundle plugin manager
+Plugin 'gmarik/Vundle.vim'
 
 "ios.vim:
-Bundle 'eraserhd/vim-ios.git'
+Plugin 'eraserhd/vim-ios.git'
 
 "YouCompleteMe:
-Bundle 'Valloric/YouCompleteMe.git'
+Plugin 'Valloric/YouCompleteMe.git'
 
 "Ctrl-p:
-Bundle 'kien/ctrlp.vim.git'
+Plugin 'kien/ctrlp.vim.git'
 
 "Dash:
-Bundle 'rizzatti/dash.vim.git'
+Plugin 'rizzatti/dash.vim.git'
 
 "funcoo:
-Bundle 'rizzatti/funcoo.vim.git'
+Plugin 'rizzatti/funcoo.vim.git'
 
 "nerdtree:
-Bundle 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 
 "slim:
-Bundle 'slim-template/vim-slim.git'
+Plugin 'slim-template/vim-slim.git'
 
 "syntastic:
-Bundle 'scrooloose/syntastic.git'
+Plugin 'scrooloose/syntastic.git'
 
 "solarized:
-Bundle 'altercation/vim-colors-solarized.git'
+Plugin 'altercation/vim-colors-solarized.git'
 
 "fugitive:
-Bundle 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-fugitive.git'
 
 "textobj:
-Bundle 'kana/vim-textobj-user.git'
+Plugin 'kana/vim-textobj-user.git'
 
 "textobj-ruby:
-Bundle 'nelstrom/vim-textobj-rubyblock.git'
+Plugin 'nelstrom/vim-textobj-rubyblock.git'
 
 "rust
-Bundle 'wting/rust.vim'
+Plugin 'wting/rust.vim'
 
 "scala
-Bundle 'derekwyatt/vim-scala'
+Plugin 'derekwyatt/vim-scala'
 
 "markdown
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
+
+"Coffeescript ReactJS syntax
+Plugin 'mtscout6/vim-cjsx.git'
 
 "coffescript
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 
 "Surround
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 "Dot Repeat
-Bundle 'tpope/vim-repeat'
+Plugin 'tpope/vim-repeat'
 
 "Unimpaired
-Bundle 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-unimpaired'
 
 "Drag visual blocks
-Bundle 'shinokada/dragvisuals.vim'
+Plugin 'shinokada/dragvisuals.vim'
 
 "CamelCaseMotion
-Bundle 'vim-scripts/camelcasemotion'
+Plugin 'vim-scripts/camelcasemotion'
 
 "Ack Vim
-Bundle 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
+
+call vundle#end()
+
+if has("autocmd")
+  filetype indent plugin on
+endif
 
 "Leader is space
 let mapleader=" "
@@ -88,9 +100,6 @@ syntax on
 
 "Allows manipulating ruby block
 runtime macros/matchit.vim
-if has("autocmd")
-  filetype indent plugin on
-endif
 
 set hidden
 set wildmenu

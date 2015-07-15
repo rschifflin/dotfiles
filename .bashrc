@@ -1,6 +1,6 @@
 export CLICOLOR=1
-export PATH=$HOME/.shell_scripts:$PATH # Custom utils
-export PATH=/user/local/bin:$PATH
+
+export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:./node_modules/.bin # Add base node modules to PATH
 
@@ -29,5 +29,8 @@ fi
 PS1='[\W$(__git_ps1 " (%s)")]'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-test -r .bash_aliases && source .bash_aliases
-test -r .bashrc.local && source .bashrc.local
+#Load bash aliases if present
+test -r ~/.bash_aliases && source ~/.bash_aliases
+
+#Load a local bashrc if present
+test -r ~/.bashrc.local && source ~/.bashrc.local
