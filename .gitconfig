@@ -12,6 +12,7 @@
         post = "!git br -d `git rev-parse --abbrev-ref HEAD`-pre"
         POST = "!git br -D `git rev-parse --abbrev-ref HEAD`-pre"
         root = "!git rev-parse --show-toplevel"
+        recent = "!git for-each-ref --sort=committerdate --format='%(refname:short)' refs/heads/"
 [diff]
 	tool = vimdiff
 [core]
