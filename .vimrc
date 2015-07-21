@@ -77,6 +77,9 @@ Plugin 'vim-scripts/camelcasemotion'
 "Ack Vim
 Plugin 'mileszs/ack.vim'
 
+"tmux Navigator
+Plugin 'christoomey/vim-tmux-navigator'
+
 call vundle#end()
 
 if has("autocmd")
