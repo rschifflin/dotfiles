@@ -109,8 +109,8 @@ Xft.hintstyle:  hintslight
 Xft.rgba:       rgb
 xterm*faceName: Liberation Mono
 xterm*faceSize: 11 11 11 11 11 11 11
-URxvt*font: xft:Liberation Mono-8
-URxvt*boldFont: xft:Liberation Mono:bold
+URxvt*font: xft:Liberation Mono:size=20:antialias=true
+URxvt*boldFont: xft:Liberation Mono:bold:size=20:antialias=true
 !URxvt*font: xft:Ubuntu Mono-11
 !URxvt*boldFont: xft:Ubuntu Mono:bold
 URxvt.letterSpace: -1
