@@ -29,7 +29,7 @@ fi
 COLOR_PROMPT='\e[0;33m'
 COLOR_GIT='\e[0;31m'
 COLOR_OFF='\e[0m'
-PS1='\['"$COLOR_PROMPT"'\][\W\['"$COLOR_GIT"'\]$(__git_ps1 " (%s)")\['"$COLOR_PROMPT"'\]]\['"$COLOR_OFF"'\] '
+PS1='\['"$COLOR_PROMPT"'\][\W\['"$COLOR_GIT"'\]$(__git_ps1 " (%s)")\['"$COLOR_PROMPT"'\]]\['"$COLOR_OFF"'\]'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 #Load git-prompt if present
