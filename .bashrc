@@ -3,7 +3,6 @@ export CLICOLOR=1
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:./node_modules/.bin # Add base node modules to PATH
-export EDITOR=vim
 
 function cdl() {
  cd "$1" && ls -la
