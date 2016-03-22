@@ -50,6 +50,9 @@ Plugin 'wting/rust.vim'
 "scala
 Plugin 'derekwyatt/vim-scala'
 
+"typescript
+Plugin 'leafgarland/typescript-vim.git'
+
 "markdown
 Plugin 'tpope/vim-markdown'
 
@@ -79,6 +82,12 @@ Plugin 'mileszs/ack.vim'
 
 "tmux Navigator
 Plugin 'christoomey/vim-tmux-navigator'
+
+"jade
+Plugin 'digitaltoad/vim-jade'
+
+"stylus
+Plugin 'wavded/vim-stylus'
 
 call vundle#end()
 
@@ -120,6 +129,13 @@ set expandtab
 set scrolloff=8
 set backspace=indent,eol,start
 set synmaxcol=256
+
+set backup
+set backupdir=~/.vim/tmp/backup/
+
+if !isdirectory(expand(&backupdir))
+  call mkdir(expand(&backupdir), "p")
+endif
 
 "Pressing enter clears search
 nnoremap <silent> <CR> :noh<CR>

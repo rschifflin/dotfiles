@@ -1,4 +1,4 @@
-export CLICOLOR=1
+export CLICOLOR=3
 
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -20,17 +20,18 @@ function flatten() {
 gcd() { cd $(git root); }
 
 GIT_PS1_SHOWDIRTYSTATE=true
+
+#Load bash aliases if present
+test -r ~/.bash_aliases && source ~/.bash_aliases
+
 if command -v brew > /dev/null 2>&1; then
-  if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+  if [ -f /usr/local/etc/bash_completion ]; then
+    source /usr/local/etc/bash_completion
   fi
 fi
 
 PS1='[\W$(__git_ps1 " (%s)")]'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-#Load bash aliases if present
-test -r ~/.bash_aliases && source ~/.bash_aliases
 
 #Load a local bashrc if present
 test -r ~/.bashrc.local && source ~/.bashrc.local
