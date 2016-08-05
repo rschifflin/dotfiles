@@ -4,6 +4,16 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:./node_modules/.bin # Add base node modules to PATH
 export PATH=$PATH:$HOME/.cargo/bin # Add Rustup to PATH
+export HEROKU_NODE_PATH=~/.heroku/node-v4.2.6-linux-x64/node-v4.2.6/out/Release/node
+
+#Load git-prompt if present
+test -r ~/.git-prompt && source ~/.git-prompt
+
+#Load bash aliases if present
+test -r ~/.bash_aliases && source ~/.bash_aliases
+
+#Load a local bashrc if present
+test -r ~/.bashrc.local && source ~/.bashrc.local
 
 function cdl() {
  cd "$1" && ls -la
@@ -22,9 +32,6 @@ gcd() { cd $(git root); }
 
 GIT_PS1_SHOWDIRTYSTATE=true
 
-#Load bash aliases if present
-test -r ~/.bash_aliases && source ~/.bash_aliases
-
 if command -v brew > /dev/null 2>&1; then
   if [ -f /usr/local/etc/bash_completion ]; then
     source /usr/local/etc/bash_completion
@@ -37,11 +44,3 @@ COLOR_OFF='\e[0m'
 PS1='\['"$COLOR_PROMPT"'\][\W\['"$COLOR_GIT"'\]$(__git_ps1 " (%s)")\['"$COLOR_PROMPT"'\]]\['"$COLOR_OFF"'\]'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-#Load git-prompt if present
-test -r ~/.git-prompt && source ~/.git-prompt
-
-#Load bash aliases if present
-test -r ~/.bash_aliases && source ~/.bash_aliases
-
-#Load a local bashrc if present
-test -r ~/.bashrc.local && source ~/.bashrc.local
