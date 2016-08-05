@@ -47,3 +47,7 @@ Thumbs.db
 # Node modules #
 #####################
 node_modules
+
+# Hacking directory in projects #
+#################################
+sandbox/

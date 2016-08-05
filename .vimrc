@@ -45,7 +45,7 @@ Plugin 'kana/vim-textobj-user.git'
 Plugin 'nelstrom/vim-textobj-rubyblock.git'
 
 "rust
-Plugin 'wting/rust.vim'
+Plugin 'rust-lang/rust.vim'
 
 "scala
 Plugin 'derekwyatt/vim-scala'
@@ -129,6 +129,7 @@ set expandtab
 set scrolloff=8
 set backspace=indent,eol,start
 set synmaxcol=256
+set nowrapscan
 
 set backup
 set backupdir=~/.vim/tmp/backup/
@@ -161,6 +162,7 @@ nmap <Leader>p :set paste<CR>
 nmap <Leader>P :set nopaste<CR>
 nnoremap <Leader>1 :set background=dark<CR>:!makedark<CR><CR>
 nnoremap <Leader>2 :set background=light<CR>:!makelight<CR><CR>
+nnoremap <Leader>D :YcmCompleter GoTo<CR>
 
 "Use silver searcher instead of ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -238,6 +240,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 vnoremap <C-X> <Esc> `.``gvP``P
 
 let g:DVB_TrimWS = 1 "remove trailing whitespace after moving
+let g:rust_recommended_style = 0 "Dont default to 4-space tabs in .rs files
 
 let g:ycm_register_as_syntastic_checker=0
 let g:ctrlp_max_files=0
@@ -245,3 +248,4 @@ let g:ctrlp_max_depth=40
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'node_modules'
   \ }
+
