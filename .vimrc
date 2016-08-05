@@ -9,10 +9,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "ios.vim:
-Plugin 'eraserhd/vim-ios.git'
+"Plugin 'eraserhd/vim-ios.git'
 
 "YouCompleteMe:
-Plugin 'Valloric/YouCompleteMe.git'
+"Plugin 'Valloric/YouCompleteMe.git'
 
 "Ctrl-p:
 Plugin 'kien/ctrlp.vim.git'
@@ -105,7 +105,7 @@ set wildignore+=*.class,*.jar,*.xml
 "VIM solarized
 let t_Co=256
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 syntax enable
 syntax on
